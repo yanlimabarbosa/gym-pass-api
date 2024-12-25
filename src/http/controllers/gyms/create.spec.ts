@@ -9,7 +9,7 @@ describe('Create Gym (e2e)', () => {
   })
 
   afterAll(async () => {
-    await app.ready()
+    await app.close()
   })
 
   it('should be able to create a gym', async () => {

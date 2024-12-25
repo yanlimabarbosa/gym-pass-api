@@ -10,7 +10,7 @@ describe('Check-In Metrics (e2e)', () => {
   })
 
   afterAll(async () => {
-    await app.ready()
+    await app.close()
   })
 
   it('should be able to get the count of check-ins', async () => {

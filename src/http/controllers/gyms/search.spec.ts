@@ -9,7 +9,7 @@ describe('Search Gyms (e2e)', () => {
   })
 
   afterAll(async () => {
-    await app.ready()
+    await app.close()
   })
 
   it('should be able to search gyms by title', async () => {

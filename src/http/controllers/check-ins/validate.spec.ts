@@ -10,7 +10,7 @@ describe('Validate Check-In (e2e)', () => {
   })
 
   afterAll(async () => {
-    await app.ready()
+    await app.close()
   })
 
   it('should be able to validate a check-in', async () => {
