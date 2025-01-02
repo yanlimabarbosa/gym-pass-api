@@ -1,7 +1,7 @@
 name: Run E2E Tests
 
 on: 
-  pull_requests: 
+  pull_request: 
     branches: [master]
 
 jobs:
@@ -15,17 +15,17 @@ jobs:
         ports: 
           - 5432:5432
         env:
-          - POSTGRESQL_USERNAME=docker
-          - POSTGRESQL_PASSWORD=docker
-          - POSTGRESQL_DATABASE=apigympass
+          POSTGRESQL_USERNAME: docker
+          POSTGRESQL_PASSWORD: docker
+          POSTGRESQL_DATABASE: apigympass
 
     steps:
-      - uses: actions/checkou@v3
+      - uses: actions/checkout@v3
       
       - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        cache: 'npm'
+        with:
+          node-version: 18
+          cache: 'npm'
 
       - run: npm ci
 
