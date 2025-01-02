@@ -15,9 +15,9 @@ jobs:
         ports: 
           - 5432:5432
         env:
-          - POSTGRESQL_USERNAME=docker
-          - POSTGRESQL_PASSWORD=docker
-          - POSTGRESQL_DATABASE=apigympass
+          POSTGRESQL_USERNAME: docker
+          POSTGRESQL_PASSWORD: docker
+          POSTGRESQL_DATABASE: apigympass
 
     steps:
       - uses: actions/checkou@v3
